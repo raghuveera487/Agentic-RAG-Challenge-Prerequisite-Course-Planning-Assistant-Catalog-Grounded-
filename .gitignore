@@ -1,0 +1,8 @@
+Environments
+venv/env/.env
+Python cache
+pycache/*.py[cod]*$py.class
+Chroma DB (Local Vector Store)
+data/chroma_db/
+OS generated files
+.DS_Store
