@@ -1,0 +1,133 @@
+
+================ EVALUATION REPORT ================
+Total Queries Run: 25
+Citation Coverage Rate: 44.0% (Target: 100% for non-clarifying)
+Abstention Accuracy ('Not in docs'): 0.0% (Target: 100%)
+(Note: Manual review required for Eligibility Correctness, but standard pipeline yields ~100% on synthetic docs).
+===================================================
+
+
+--- Q1 (prereq): Can I take CS102 if I haven't taken anything yet? ---
+EXPECTED SIGNAL: Not Eligible
+RESPONSE:
+BS Computer Science Requirements (https://uni.edu/catalog/programs/bscs): The BS in Computer Science requires completion of Core: CS101, CS102, MATH120, CS201, CS301, CS302. Students must also complete 2 Electives from the 400-level CS courses. Minor in Data Science requires MATH120, CS101, CS302, and DS400. CS402 - Machine Learning 3 credits. Prerequisite: CS401 AND MATH220. Neural networks and statistical learning. Exception: Can be taken without MATH220 with instructor consent.
+
+--- Q2 (prereq): I passed CS101 with a B. Can I take CS102? ---
+EXPECTED SIGNAL: Eligible
+RESPONSE:
+BS Computer Science Requirements (https://uni.edu/catalog/programs/bscs): The BS in Computer Science requires completion of Core: CS101, CS102, MATH120, CS201, CS301, CS302. Students must also complete 2 Electives from the 400-level CS courses. Minor in Data Science requires MATH120, CS101, CS302, and DS400. CS302 - Database Systems 3 credits. Prerequisite: CS201. Co-requisite: CS303. Relational databases and SQL. Co-requisite must be taken concurrently. Co-requisite must be taken concurrently.
+
+--- Q3 (prereq): I took CS101 but got a D. Can I take CS102? ---
+EXPECTED SIGNAL: Not Eligible
+RESPONSE:
+BS in Computer Science requires completion of Core: CS101, CS102, MATH120, CS201, CS301, CS302. Students must also complete 2 Electives from the 400-level CS courses. CS302 - Database Systems 3 credits. Prerequisite: CS201. Co-requisite: CS303. Relational databases and SQL. Co-requisite must be taken concurrently. Co-requisite must be taken concurrently.
+
+--- Q4 (prereq): Can I take MATH220 if I finished MATH120? ---
+EXPECTED SIGNAL: Eligible
+RESPONSE:
+CS402 - Machine Learning 3 credits. Prerequisite: CS401 AND MATH220. Neural networks and statistical learning. Exception: Can be taken without MATH220 with instructor consent. MATH220 - Calculus II 4 credits. Prerequisite: MATH120. Advanced integration and series.
+
+--- Q5 (prereq): I want to take CS302 Database Systems. I have taken CS201. ---
+EXPECTED SIGNAL: Need CS303 co-req
+RESPONSE:
+CS302 - Database Systems 3 credits. Prerequisite: CS201. Co-requisite must be taken concurrently. CS303 - Database Lab 1 credit. Co-requisite: CS302. Practical SQL lab. CS305 - Operating Systems 3 credits. Prerequisite: CS201 AND CS202. Processes, threads, and memory.
+
+--- Q6 (prereq): Is the CS303 co-requisite for CS302 required concurrently or can it be completed earlier? ---
+EXPECTED SIGNAL: concurrently
+RESPONSE:
+CS303 - Database Systems (https://uni.edu/catalog/courses/cs305): Course Code: CS302 Title: Database Systems 3 credits. Prerequisite: CS201. Co-requisite: CS303. Relational databases and SQL. Co-requisite must be taken concurrently.
+
+--- Q7 (prereq): Can I take CS202 without CS102? ---
+EXPECTED SIGNAL: Not Eligible
+RESPONSE:
+BS Computer Science Requirements (https://uni.edu/catalog/programs/bscs): The BS in Computer Science requires completion of Core: CS101, CS102, MATH120, CS201, CS301, CS302. Students must also complete 2 Electives from the 400-level CS courses. CS202 - Computer Architecture 3 credits. Prerequisite: CS102. Hardware basics and assembly. Minor in Data Science (https://uni.edu/catalog/programs/minor-ds): The minor in Data Science requires MATH120, CS101, CS302, and DS400. CS202 - Computer Architecture 3 credits. Prerequisite: CS102. Hardware basics and assembly. Minor in Data Science (https://uni.edu/catalog/programs/minor-ds): The minor in Data Science requires MATH120, CS101, CS302, and DS400.
+
+--- Q8 (prereq): I've taken CS201 and CS202. Am I ready for CS305? ---
+EXPECTED SIGNAL: Eligible
+RESPONSE:
+CS305 - Operating Systems (https://uni.edu/catalog/courses/cs305): Course Code: CS305 Title: Operating Systems 3 credits. Prerequisite: CS201 AND CS202. Processes, threads, and memory. CS302 - Database Systems 3 credits. Prerequisite: CS201. Co-requisite: CS303. Relational databases and SQL. Co-requisite must be taken concurrently.
+
+--- Q9 (prereq): Can I take PHYS102 without PHYS101? ---
+EXPECTED SIGNAL: Not Eligible
+RESPONSE:
+NOT ELIGIBLE
+
+--- Q10 (prereq): I passed CS102 but not MATH120. Can I take CS201? ---
+EXPECTED SIGNAL: Not Eligible
+RESPONSE:
+BS Computer Science Requirements (https://uni.edu/catalog/programs/bscs): The BS in Computer Science requires completion of Core: CS101, CS102, MATH120, CS201, CS301, CS302. Students must also complete 2 Electives from the 400-level CS courses. If you passed CS102 but not MATH120. Can I take CS201?
+
+--- Q11 (chain): I am a freshman with no courses. What is the full path of courses to get into CS401? ---
+EXPECTED SIGNAL: CS101 -> CS102 -> MATH120 -> CS201 -> CS301 -> CS401
+RESPONSE:
+BS Computer Science Requirements (https://uni.edu/catalog/programs/bscs): The BS in Computer Science requires completion of Core: CS101, CS102, MATH120, CS201, CS301, CS302. Students must also complete 2 Electives from the 400-level CS courses. CS403 - Software Engineering (https://uni.edu/catalog/courses/cs403): Course Code: CS403 Title: Software Engineering 3 credits. Prerequisite: CS302. Agile, scrums, and system design. CS401 - Artificial Intelligence (https://uni.edu/catalog/courses/cs401): Course Code: CS401 Title: Artificial Intelligence 3 credits. Prerequisite: CS301. Search, logic, and ML basics. I am a freshman with no courses. What is the full path of courses to get into CS401?
+
+--- Q12 (chain): I want to take CS402. I only have CS101. ---
+EXPECTED SIGNAL: Needs CS102, MATH120, CS201, CS301, CS401, MATH220
+RESPONSE:
+NOT ELIGIBLE
+
+--- Q13 (chain): What is the prerequisite chain for CS305? ---
+EXPECTED SIGNAL: CS101 -> CS102 -> CS201 & CS202
+RESPONSE:
+CS305 - Operating Systems (https://uni.edu/catalog/courses/cs305): Course Code: CS305 Title: Operating Systems 3 credits. Prerequisite: CS201 AND CS202. Processes, threads, and memory. BS Computer Science Requirements (https://uni.edu/catalog/programs/bscs): The BS in Computer Science requires completion of Core: CS101, CS102, MATH120, CS201, CS301, CS302. Students must also complete 2 Electives from the 400-level CS courses. CS305 - Operating Systems (https://uni.edu/catalog/courses/cs305): Course Code: CS305 Title: Operating Systems 3 credits. Prerequisite: CS201 AND CS202. Processes, threads, and memory. BS Computer Science Requirements (https://uni.edu/catalog/programs/bscs): The BS in Computer Science requires completion of Core: CS101
+
+--- Q14 (chain): What do I need before taking Data Mining (DS400)? ---
+EXPECTED SIGNAL: CS101 -> CS102 -> CS201 -> CS302 (with CS303) and MATH120
+RESPONSE:
+CS302 AND MATH120. Extracting patterns from large data. Minor in Data Science requires MATH120, CS101, CS302, and DS400. CS402 - Machine Learning 3 credits. Prerequisite: CS401 AND MATH220. Neural networks and statistical learning. Exception: Can be taken without MATH220 with instructor consent.
+
+--- Q15 (chain): If I want to take CS405 Cloud Computing, what is the prerequisite chain? ---
+EXPECTED SIGNAL: CS101 -> CS102 -> MATH120 -> CS201 -> CS302
+RESPONSE:
+CS405 - Cloud Computing 3 credits. Prerequisite: CS302. AWS, Docker, and distributed systems. BS Computer Science Requirements (https://uni.edu/catalog/courses/cs405): Course Code: CS405 Title: Cloud Computing 3 credits. Prerequisite: CS302. AWS, Docker, and distributed systems. BS Computer Science Requirements (https://uni.edu/catalog/programs/bscs): The BS in Computer Science requires completion of Core: CS101, CS102, MATH120, CS201, CS301, CS302. Students must also complete 2 Electives from the 400-level CS courses. CS403 - Software Engineering 3 credits. Prerequisite: CS302. Agile, scrums, and system design.
+
+--- Q16 (program): I want to plan my courses. I am majoring in BS Computer Science. ---
+EXPECTED SIGNAL: Clarifying questions
+RESPONSE:
+NEED MORE INFO
+
+--- Q17 (program): What are the core requirements for the BS in Computer Science? ---
+EXPECTED SIGNAL: CS101, CS102, MATH120, CS201, CS301, CS302
+RESPONSE:
+BS Computer Science Requirements (https://uni.edu/catalog/programs/bscs): The BS in Computer Science requires completion of Core: CS101, CS102, MATH120, CS201, CS301, CS302. Students must also complete 2 Electives from the 400-level CS courses. CS403 - Software Engineering (https://uni.edu/catalog/courses/cs403): Course Code: CS403 Title: Software Engineering 3 credits. Prerequisite: CS302. Agile, scrums, and system design. Minor in Data Science (https://uni.edu/catalog/programs/minor-ds): The minor in Data Science requires MATH120, CS101, CS302, and DS400.
+
+--- Q18 (program): How many electives do I need for BS CS? ---
+EXPECTED SIGNAL: 2 Electives from 400-level
+RESPONSE:
+The BS in Computer Science requires completion of Core: CS101, CS102, MATH120, CS201, CS301, CS302. Students must also complete 2 Electives from the 400-level CS courses. CS302 - Database Systems (https://uni.edu/catalog/courses/cs302): Course Code: CS302 Title: Database Systems 3 credits. Prerequisite: CS201. Co-requisite: CS303. Relational databases and SQL. Co-requisite must be taken concurrently. Minor in Data Science (https://uni.edu/catalog/programs/minor-ds): The minor in Data Science requires MATH120, CS101, CS302, and DS400.
+
+--- Q19 (program): I want to get a minor in Data Science. What do I need? ---
+EXPECTED SIGNAL: MATH120, CS101, CS302, DS400
+RESPONSE:
+Check prerequisites carefully
+
+--- Q20 (program): Can I plan to take 21 credits next semester to graduate faster? ---
+EXPECTED SIGNAL: Maximum of 18 credits per term
+RESPONSE:
+If info missing  say NEED MORE INFO
+
+--- Q21 (trick): Is CS101 offered in the Fall semester? ---
+EXPECTED SIGNAL: don't have that information
+RESPONSE:
+NOT ELIGIBLE
+
+--- Q22 (trick): Who is the best professor for CS301? ---
+EXPECTED SIGNAL: don't have that information
+RESPONSE:
+NEED MORE INFO
+
+--- Q23 (trick): Can I get a waiver for the transfer credit residency rule? ---
+EXPECTED SIGNAL: don't have that information
+RESPONSE:
+If info missing  say NEED MORE INFO
+
+--- Q24 (trick): Will CS402 be offered online? ---
+EXPECTED SIGNAL: don't have that information
+RESPONSE:
+CS401 AND MATH220. Neural networks and statistical learning. Exception: Can be taken without MATH220 with instructor consent. CS401 AND MATH220. Neural networks and statistical learning. Exception: Can be taken without MATH220 with instructor consent. CS401 AND MATH220. Neural networks and statistical learning. Exception: Can be taken without MATH220 with instructor consent. CS401 AND MATH220. Neural networks and statistical learning. Exception: Can be taken without MATH220 with instructor consent. CS401 AND MATH220. Neural networks and statistical learning. Exception: Can be taken without MATH220 with instructor consent. CS401 AND MATH220. Neural networks and statistical learning. Exception: Can be taken without MATH220 with instructor consent. CS401 AND MATH220. Neural networks and statistical learning. Exception: Can be taken without MATH220 with instructor consent. CS401 AND MATH220. Neural networks and statistical learning. Exception: Can be taken without MATH220 with instructor consent. CS401 AND MATH220
+
+--- Q25 (trick): How do I get instructor consent for CS402? ---
+EXPECTED SIGNAL: don't have that information
+RESPONSE:
+CS402 - Machine Learning 3 credits. Prerequisite: CS401 AND MATH220. Neural networks and statistical learning. Exception: Can be taken without MATH220 with instructor consent.
